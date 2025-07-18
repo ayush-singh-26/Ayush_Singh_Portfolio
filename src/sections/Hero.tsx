@@ -125,7 +125,7 @@ export const HeroSection = () => {
               <ArrowDown className="size-4 group-hover:translate-y-1 transition-transform" />
             </button>
           </a>
-          <a href={process.env.NEXT_PUBLIC_LINKEDIN_URL} target="_blank">
+          <a href={process.env.NEXT_PUBLIC_LINKEDIN_URL} target="_blank" rel="noopener noreferrer">
             <button className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-500 to-sky-500 hover:from-emerald-400 hover:to-sky-400 text-gray-950 px-6 h-12 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-emerald-500/20">
               Let&apos;s Connect
             </button>
