@@ -1,23 +1,35 @@
-import React from 'react'
-import StarIcon from '@/assets/icons/star.svg'
+import React from 'react';
+import StarIcon from '@/assets/icons/star.svg';
 import { twMerge } from 'tailwind-merge';
 
-function CardHeader({title,description,className,}:{
-    title:string;
-    description : string;
-    className?:string
-}) {
-    return (
-        <div className={twMerge('flex flex-col p-6 md:py-8 md:px-10',className)}>
-            <div className='inline-flex items-center gap-2'>
-                <StarIcon className="size-9 text-emerald-300" />
-                <h3 className='font-serif text-3xl'>{title}</h3>
-            </div>
-            <p className='text-sm text-white/60 mt-2'>
-                {description}
-            </p>
-        </div>
-    )
+interface CardHeaderProps {
+  title: string;
+  description: string;
+  className?: string;
+  icon?: React.ReactNode; // Optional custom icon
 }
 
-export default CardHeader
+function CardHeader({
+  title,
+  description,
+  className,
+  icon = <StarIcon className="size-7 md:size-8 text-emerald-400" />,
+}: CardHeaderProps) {
+  return (
+    <header className={twMerge('flex flex-col p-6 md:p-8', className)}>
+      <div className="inline-flex items-center gap-3">
+        {icon}
+        <h3 className="font-serif text-2xl md:text-3xl font-medium text-white">
+          {title}
+        </h3>
+      </div>
+      {description && (
+        <p className="text-sm md:text-base text-white/70 mt-2 md:mt-3 max-w-[90%]">
+          {description}
+        </p>
+      )}
+    </header>
+  );
+}
+
+export default CardHeader;

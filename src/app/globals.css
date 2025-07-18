@@ -10,7 +10,7 @@
 }
 
 @layer utilities {
-    .container{
-        @apply lg:max-w-5xl;
+    .custom-container{
+        @apply lg:max-w-5xl mx-auto px-4;
     }
 }
