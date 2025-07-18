@@ -3,19 +3,23 @@ import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg'
 const footerLinks = [
   {
     title: 'Youtube',
-    href: '#',
+    href: process.env.NEXT_PUBLIC_YOUTUBE_URL,
+    target : '_blank'
   },
   {
     title: 'Twitter',
-    href: '#',
+    href: process.env.NEXT_PUBLIC_TWITTER_URL,
+    target : '_blank'
   },
   {
     title: 'Instagram',
-    href: '#',
+    href: process.env.NEXT_PUBLIC_INSTAGRAM_URL,
+    target : '_blank'
   },
   {
     title: 'Linkedin',
-    href: '#',
+    href: process.env.NEXT_PUBLIC_LINKEDIN_URL,
+    target : '_blank'
   },
 ]
 
@@ -33,6 +37,7 @@ export const Footer = () => {
               <a 
                 href={link.href} 
                 key={link.title} 
+                target={link.target}
                 className='inline-flex items-center gap-1.5 hover:text-white transition-colors'
               >
                 <span className='font-semibold'>{link.title}</span>

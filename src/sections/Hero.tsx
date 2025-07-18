@@ -13,11 +13,11 @@ export const HeroSection = () => {
     <section className="relative py-20 md:py-48 lg:py-60 overflow-x-clip">
       <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
         {/* Grain Texture */}
-        <div 
-          className="absolute inset-0 -z-30 opacity-5" 
+        <div
+          className="absolute inset-0 -z-30 opacity-5"
           style={{ backgroundImage: `url(${grainImage.src})` }}
         />
-        
+
         {/* Concentric Circles */}
         <div className="size-[620px] hero-ring" />
         <div className="size-[820px] hero-ring" />
@@ -57,10 +57,10 @@ export const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <Image 
-              src={memojiImage} 
-              className="size-24 md:size-32 rounded-full border-2 border-white/10" 
-              alt="Professional memoji avatar" 
+            <Image
+              src={memojiImage}
+              className="size-24 md:size-32 rounded-full border-2 border-white/10"
+              alt="Professional memoji avatar"
               priority
             />
           </motion.div>
@@ -99,7 +99,7 @@ export const HeroSection = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="mt-4 font-serif text-2xl md:text-3xl text-center text-white/90 tracking-wide"
         >
-          Frontend Developer & UI Specialist
+          MERN Stack Developer
         </motion.h2>
 
         {/* Description */}
@@ -109,7 +109,7 @@ export const HeroSection = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="mt-6 max-w-2xl mx-auto text-center text-lg text-white/70 leading-relaxed"
         >
-          I craft high-performance web applications with modern technologies like React, Next.js, and TypeScript, focusing on clean code and exceptional user experiences.
+          I craft high-performance web applications with modern technologies like Mongo DB, Express.js, React.js and Node.js focusing on clean code and exceptional user experiences.
         </motion.p>
 
         {/* Action Buttons */}
@@ -119,13 +119,17 @@ export const HeroSection = () => {
           transition={{ duration: 0.5, delay: 0.5 }}
           className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-10"
         >
-          <button className="inline-flex items-center justify-center gap-2 border border-white/20 bg-white/5 hover:bg-white/10 px-6 h-12 rounded-xl transition-all duration-300 group">
-            <span className="font-semibold">View My Work</span>
-            <ArrowDown className="size-4 group-hover:translate-y-1 transition-transform" />
-          </button>
-          <button className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-500 to-sky-500 hover:from-emerald-400 hover:to-sky-400 text-gray-950 px-6 h-12 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-emerald-500/20">
-            Let&apos;s Connect
-          </button>
+          <a href="#projects">
+            <button className="inline-flex items-center justify-center gap-2 border border-white/20 bg-white/5 hover:bg-white/10 px-6 h-12 rounded-xl transition-all duration-300 group">
+              <span className="font-semibold">View My Work</span>
+              <ArrowDown className="size-4 group-hover:translate-y-1 transition-transform" />
+            </button>
+          </a>
+          <a href={process.env.NEXT_PUBLIC_LINKEDIN_URL} target="_blank">
+            <button className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-500 to-sky-500 hover:from-emerald-400 hover:to-sky-400 text-gray-950 px-6 h-12 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-emerald-500/20">
+              Let&apos;s Connect
+            </button>
+          </a>
         </motion.div>
       </div>
     </section>
